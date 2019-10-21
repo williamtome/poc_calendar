@@ -16,4 +16,3 @@ Route::get('/', function () {
 });
 
 Route::resource('calendar', 'CalendarController');
-// Route::get('/calendar/events', 'CalendarController@listEvents')->name('events.list');

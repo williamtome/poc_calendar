@@ -65,7 +65,18 @@ class CalendarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $start = date("Y-m-d H:i:s", strtotime(str_replace("/", "-",$request->start)));
+        $end = date("Y-m-d H:i:s", strtotime(str_replace("/", "-",$request->end)));
+        
+        $event = new Event();
+        $event->title = $request->title;
+        $event->start = $start;
+        $event->end = $end;
+        $event->color = $request->color;
+        $event->save();
+
+        return redirect()->route('calendar.index')
+            ->with('status', 'Evento adicionado com sucesso.');
     }
 
     /**
