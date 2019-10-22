@@ -43,7 +43,8 @@
       // THIS KEY WON'T WORK IN PRODUCTION!!!
       // To make your own Google API key, follow the directions here:
       // http://fullcalendar.io/docs/google_calendar/
-      googleCalendarApiKey: 'AIzaSyDcnW6WejpTOCffshGDDb4neIrXVUA1EAE',
+      // googleCalendarApiKey: 'AIzaSyDcnW6WejpTOCffshGDDb4neIrXVUA1EAE',
+      googleCalendarApiKey: 'AIzaSyCNj0123VbvSFq9LEXV6AJmz6DJGe67qso',
 
       // US Holidays
       // events: 'en.usa#holiday@group.v.calendar.google.com' ,
@@ -55,10 +56,12 @@
             color: "{{$eventos[$i]['color']}}",
             start: "{{$eventos[$i]['start']}}",
             end: "{{$eventos[$i]['end']}}",
+            textColor: 'white',
         },
         @endfor
 
       ],
+      
 
       select: function (info) {
         // alert("Selected: " + info.startStr + " to " + info.endStr)
